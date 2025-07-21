@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Exam {
+    static String correctUserName = "student";
+    static String correctPassword = "1234";
+    static String correctAnswer = "B";  
+    
+    public static void main(String[] args) {
+        int score = 0;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the username: ");
+        String userName = sc.nextLine();
+
+        System.out.print("Enter the password: ");
+        String password = sc.nextLine();
+
+     
+        if (userName.equals(correctUserName) && password.equals(correctPassword)) {
+            System.out.println("====== Welcome to exam =======");
+            System.out.println("\n====== JAVA MCQ TEST =======");
+
+            System.out.println("Q1. Which of the following is a valid data type in Java?");
+            System.out.println("A = number");
+            System.out.println("B = int");
+            System.out.println("C = real");
+            System.out.println("D = doubleint");
+            System.out.print("Select the option: ");
+
+            String ans = sc.nextLine().toUpperCase(); 
+
+            
+            if (ans.equals(correctAnswer)) {
+                score++;
+                System.out.println("Correct! Your score is: " + score);
+            } else {
+                System.out.println("Wrong answer. Your score is: " + score);
+            }
+
+        } else {
+            System.out.println("Wrong username or password.");
+        }
+
+        sc.close();
+    }
+}
